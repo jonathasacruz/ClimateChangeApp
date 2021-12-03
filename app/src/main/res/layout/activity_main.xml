@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="39dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:text="CLIMA E TEMPO"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TEMPO AGORA" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="178dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/temptext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Temperatura" />
+
+            <TextView
+                android:id="@+id/feelslike_ctext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Sensação Térmica" />
+
+            <TextView
+                android:id="@+id/precip_mmtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Precipitação(mm)" />
+
+            <TextView
+                android:id="@+id/uvtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Índice UV"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/cotext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="CO(μg/m3)" />
+
+            <TextView
+                android:id="@+id/pm2_5text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Partículas 2,5μm(μg/m3)" />
+
+            <TextView
+                android:id="@+id/pm10text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Partículas 10μm(μg/m3)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/temp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="temperatura atual" />
+
+            <TextView
+                android:id="@+id/feelslike_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="feelslike_c" />
+
+            <TextView
+                android:id="@+id/precip_mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="precip_mm" />
+
+            <TextView
+                android:id="@+id/uv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="uv" />
+
+            <TextView
+                android:id="@+id/co"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="co" />
+
+            <TextView
+                android:id="@+id/pm2_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:text="pm2_5" />
+
+            <TextView
+                android:id="@+id/pm10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="pm10" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32">
+
+        <LinearLayout
+            android:layout_width="123dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="DATA" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temp Máxima" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temp Mínima" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temp Média" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precipitação Total" />
+
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Índice UV" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/todayDate"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="HOJE" />
+
+            <ImageView
+                android:id="@+id/d0_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="left"
+                app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+            <TextView
+                android:id="@+id/d0_maxtemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MaxTemp" />
+
+            <TextView
+                android:id="@+id/d0_mintemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MinTemp" />
+
+            <TextView
+                android:id="@+id/d0_avgtemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AvgTemp" />
+
+            <TextView
+                android:id="@+id/d0_totalprecip_mm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="totalprecip" />
+
+            <TextView
+                android:id="@+id/d0_uv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UV" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tomorrowDate"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="AMANHÃ" />
+
+            <ImageView
+                android:id="@+id/d1_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="left"
+                app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+            <TextView
+                android:id="@+id/d1_maxtemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MaxTemp" />
+
+            <TextView
+                android:id="@+id/d1_mintemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MinTemp" />
+
+            <TextView
+                android:id="@+id/d1_avgtemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AvgTemp" />
+
+            <TextView
+                android:id="@+id/d1_totalprecip_mm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TotalPrecip" />
+
+            <TextView
+                android:id="@+id/d1_uv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UV" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/afterTomorrowDate"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="DEPOIS DE AMANHÃ" />
+
+            <ImageView
+                android:id="@+id/d2_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="left"
+                app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+            <TextView
+                android:id="@+id/d2_maxtemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MaxTemp" />
+
+            <TextView
+                android:id="@+id/d2_mintemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MinTemp" />
+
+            <TextView
+                android:id="@+id/d2_avgtemp_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AvgTemp" />
+
+            <TextView
+                android:id="@+id/d2_totalprecip_mm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TotalPrecip" />
+
+            <TextView
+                android:id="@+id/d2_uv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UV" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="PREVISÃO DO TEMPO"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

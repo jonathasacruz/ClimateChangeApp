@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     TextView
             //Textos do app
             // TEMPO AGORA
-            conditionText, temp_c, precip_mm, feelslike_c, uv, co, pm2_5, pm10,
+            locationName, conditionText, temp_c, precip_mm, feelslike_c, uv, co, pm2_5, pm10,
     //PREVISAO HOJE
     d0_maxtemp_c, d0_mintemp_c, d0_avgtemp_c, d0_totalprecip_mm, d0_uv,
     //PREVISAO AMANHA
@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        locationName = findViewById(R.id.locationName);
         conditionText = findViewById(R.id.condition);
         temp_c = findViewById(R.id.temp_c);
         precip_mm = findViewById(R.id.precip_mm);
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 //Obtem localização GPS
                 //Toast só pra ver se está funcionando
 
-                Toast.makeText(getApplicationContext(), String.valueOf(loc.getLatitude() + "," + loc.getLongitude()), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), String.valueOf("Latitude: "+loc.getLatitude() + "\nLongitude: " + loc.getLongitude()), Toast.LENGTH_SHORT).show();
                 setLocation(String.valueOf(loc.getLatitude() + "," + loc.getLongitude()));
 
                 tempoagora(location);
@@ -147,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
                         try {
                             //Destrinchando o JSON
                             JSONObject jsonObject = new JSONObject(response);
+                            JSONObject locationJson = new JSONObject(jsonObject.getJSONObject("location").toString()); //Localização
                             JSONObject current = new JSONObject(jsonObject.getJSONObject("current").toString()); //Tempo agora
                             JSONObject condition = new JSONObject(current.getJSONObject("condition").toString());
                             JSONObject currentAirQuality = new JSONObject(current.getJSONObject("air_quality").toString());
@@ -160,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
                             JSONObject afterTomorrow = new JSONObject(afterTomorrowArray.getJSONObject("day").toString()); //Previsão para depois de amanhã
 
                             //Tempo agora
+                            locationName.setText("em "+locationJson.getString("name"));
                             conditionText.setText(condition.getString("text"));
                             temp_c.setText(numeroDecimal(current.getString("temp_c")) + "°C");
                             feelslike_c.setText(numeroDecimal(current.getString("feelslike_c")) + "ºC");
